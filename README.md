@@ -1,4 +1,5 @@
-# petShop
+# petShop  v1.0.1
+## 更新了寄养功能
 ## 个人博客
 https://jitorun.top/
 ## animal类
@@ -13,7 +14,7 @@ https://jitorun.top/
 - 重写了petShop的buy，完成进货功能
 ## petShop接口
 - cost集成了其他类的输出功能，最终可以输出一整份清单
-
+- 增加了寄养功能
 ## setMeal
 - 打包了各种套餐
 
