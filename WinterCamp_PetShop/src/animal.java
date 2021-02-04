@@ -4,7 +4,16 @@ public class animal {
     private String sex;
     private int age;
     private int price=0;
-    public int getPrice() {
+    private boolean adoption=false;
+
+
+    void setAdoption(){
+        adoption=true;
+    }
+    boolean getAdoption(){
+        return adoption;
+    }
+    int getPrice() {
         return price;
     }
     public void isvaccine(){

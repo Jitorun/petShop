@@ -21,10 +21,14 @@ public class Cat extends animal implements petShop{
 
     @Override
     public String toString() {
-        return "         Cat [ ID :"+getID()+" 姓名 :" +getName()+ " 性别 :"+getSex()+" 年龄 :"+getAge()+" 价格 :"+getPrice()+"]";
+        if(!this.getAdoption())
+            return "         Cat [ ID :"+getID()+" 姓名 :" +getName()+ " 性别 :"+getSex()+" 年龄 :"+getAge()+" 价格 :"+getPrice()+ "]";
+        else
+            return "  寄养  Cat [ ID :"+getID()+" 姓名 :" +getName()+ " 性别 :"+getSex()+" 年龄 :"+getAge()+"]";
     }
     @Override
     public void isvaccine(){
+        //用来输出疫苗注射清单
         System.out.println("------------------------------------猫----------------------------------");
         System.out.println(toString());
         System.out.println("-------------------------------疫苗接种情况-------------------------------");

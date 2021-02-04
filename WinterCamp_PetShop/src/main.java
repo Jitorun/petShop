@@ -11,6 +11,17 @@ public class main {
         new Cat("001","小白","雌",5,1000).buy("001","小白","雌",5,1000);
         new Dog("002","小黑","雌",5,1200).buy("002","小黑","雌",5,1200);
         new Dog("003","小黄","雄",3,1100).buy("003","小黄","雄",3,1100);
+
+
+        /*
+        寄养测试
+         */
+        petShop.adopt(new Cat("011","小青","雄",4,0));//寄养
+        petShop.printAdopt();
+        petShop.takeadopt("010");//测试输入错误序号
+        petShop.takeadopt("011");//领走寄养宠物
+        petShop.printAdopt();
+
         for (animal test : petShop.list){
             System.out.println("-----------------------------------------------------------");
             System.out.println(test.toString());

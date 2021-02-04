@@ -1,12 +1,42 @@
 import java.util.ArrayList;
 import java.util.Date;
 import java.text.SimpleDateFormat;
+import java.util.Iterator;
 import java.util.List;
 
 public interface petShop {
 
     static List<animal> list =new ArrayList<>();
+    static List<animal> listadopt = new ArrayList<>();
+    public static void adopt(animal animals){
+        //寄养
+        animals.setAdoption();
+        listadopt.add(animals);
+    }
+    public static void takeadopt(String ID){
 
+        Iterator<animal> iterator = listadopt.iterator();
+        while (iterator.hasNext()){
+            animal next = iterator.next();
+            if(next.getID().equals(ID)){
+                iterator.remove();
+                return;
+            }
+        }
+        System.out.println("请输入正确序号");
+    }
+    public static void printAdopt(){
+        if (listadopt.size()==0){
+            System.out.println("当前无寄养宠物");
+
+        }
+        else{
+            for (animal an:listadopt){
+                System.out.println(an.toString());
+            }
+        }
+
+    }
     public static void cost(String ID, int i)//出售
     {
         //System.out.println("");
@@ -40,7 +70,7 @@ public interface petShop {
                 setMeal.money+=testi.getPrice()+setMeal.pag(i);
                 System.out.println("                                                    当前店铺资金为:"+setMeal.money);
                 list.remove(testi);
-                System.out.println("--------------------------操作完成--------------------------");
+                System.out.println("-------------------------------操作完成-------------------------------");
                 return;
             }
 

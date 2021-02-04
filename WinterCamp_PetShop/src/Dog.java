@@ -19,7 +19,10 @@ public class Dog extends  animal implements petShop{
 
     @Override
     public String toString() {
-        return "         Dog [ ID :"+getID()+" 姓名 :" +getName()+ " 性别 :"+getSex()+" 年龄 :"+getAge()+" 价格 :"+getPrice()+ "]";
+        if(!this.getAdoption())
+            return "         Dog [ ID :"+getID()+" 姓名 :" +getName()+ " 性别 :"+getSex()+" 年龄 :"+getAge()+" 价格 :"+getPrice()+ "]";
+        else
+            return " 寄养  Dog [ ID :"+getID()+" 姓名 :" +getName()+ " 性别 :"+getSex()+" 年龄 :"+getAge()+"]";
     }
     @Override
     public void isvaccine(){
